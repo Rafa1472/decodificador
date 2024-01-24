@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #B8621B;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+body {
+    background: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.container__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    font-size: 2rem;
+}
+
+.container__cabecalho__logo {
+    color: #E3CCAE;
+    
+}
+
+.container__cabecalho__logo span {
+    border: 1px solid;
+    width: 10px;
+    
+}
+
+.container__deco {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 0 4%;
+}
+
+.container__deco .input {
+    width: 400px;
+    height: 330px;
+}
+
+.input__deco {
+    width: 345px;
+    height: 330px;
+    font-size: 20px;
+    background: transparent;
+    border: 0 none;
+    color: var(--cor-secundaria);
+    outline: 0;
+    padding: 5px;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid;
+    border-radius: 20px;
+    width: 350px;
+    height: 450px;
+    margin-right: 4%;
+}
+
+#output h1 {
+    text-align: center;
+    font-size: 18rem;
+}
+
+#output h2 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.container__button button {
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    width: 150px;
+    height: 50px;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+.botton__copiar {
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10%;
+    margin-left: 30%;
+    cursor: pointer;
+}
+
+
+.container__button button:hover {
+    border: 2px solid var(--cor-secundaria);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin-top: 15px;
+    background-color: lightgray;
+}
+
+.rodape h3 {
+    font-size: 1rem;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+}
+
+.icons img:hover {
+    padding: 0.5px;
+}
+
+@media (max-width: 800px) {
+    .container__cabecalho {
+        flex-direction: column;
+    }
+
+    .container__deco {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    #output {
+        width: auto;
+    }
+
+    .container__button {
+        margin: 2%;
+        width: auto;
+    }
+}
