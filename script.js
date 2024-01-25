@@ -17,10 +17,32 @@ function descriptografar() {
     document.getElementById('output').innerHTML = '<textarea readonly class="input__deco">' + resultadoDescripto + '</textarea>' + '<button class="botton__copiar" id="copiar" onclick="copiar()">Copiar</button>';
 }
 
-function copiar() {
-    let copyTexto = document.getElementById('output').querySelector('textarea');
+function trocarCopiar(tag, texto, copiado) {
+    let campo = document.querySelector(tag);
+   campo.innerHTML = texto;
 
-    copyTexto.select();
+
+    if (copiado) {
+    campo.classList.add('copiado');
+    } else {
+    campo.classList.remove('copiado');
+    }
+
+}
+
+function exibirNoCopiar() {
+    trocarCopiar('.botton__copiar', 'Copiar')
+}
+
+exibirNoCopiar()
+
+function copiar() {
+    let copiaTexto = document.getElementById('output').querySelector('textarea');
+
+    copiaTexto.select();
     document.execCommand('copy');
-    alert('Texto Copiado');
+
+    if(copiaTexto == outInput.querySelector('textarea')) {
+        trocarCopiar('.botton__copiar', 'Copiado ✓', true);
+    }
 }
