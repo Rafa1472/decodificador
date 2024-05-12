@@ -54,7 +54,7 @@ body {
     background: transparent;
     border: 0 none;
     color: var(--cor-secundaria);
-    outline: 0;
+    outline: none;
     padding: 5px;
 }
 
